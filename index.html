@@ -1,291 +1,453 @@
 <!DOCTYPE html>
 <html lang="ta" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARC Home Renovation, Masonry & Construction Works | Keeranur, Pudukkottai</title>
+    <meta name="description" content="ARC Home Renovation - புதிய வீடு கட்டுதல், புதுப்பித்தல், டைல்ஸ், வாட்டர்ப்ரூஃபிங் மற்றும் அனைத்து கொத்தனார் வேலைகள். Keeranur & Pudukkottai.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans Tamil', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    },
+                    colors: {
+                        dark: {
+                            950: '#030712',
+                            900: '#0B0F19',
+                            850: '#111827',
+                            800: '#1F2937'
+                        },
+                        amber: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            background-color: #030712;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 20%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 80%, rgba(217, 119, 6, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card:hover {
+            background: rgba(26, 34, 53, 0.85);
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.25);
+        }
+        .glass-input {
+            background: rgba(11, 15, 25, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: #F59E0B;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+            outline: none;
+            background: rgba(17, 24, 39, 0.9);
         }
     </style>
 </head>
-
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2">
-                <div class="bg-amber-600 text-white p-2 rounded-lg font-bold text-xl">
-                    <i class="fa-solid fa-trowel-bricks"></i>
+    <nav class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center text-slate-950 font-black shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-trowel-bricks text-xl"></i>
                 </div>
                 <div>
-                    <span class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 block leading-tight">ARC
-                        HOME RENOVATION</span>
-                    <span class="text-xs text-amber-600 font-semibold tracking-wider uppercase">Masonry & Construction
-                        Works</span>
+                    <span class="text-lg font-black tracking-tight text-white block leading-none font-mono">ARC HOME RENOVATION</span>
+                    <span class="text-[10px] sm:text-xs font-bold text-amber-400 tracking-widest uppercase mt-0.5 block">Masonry & Construction Works</span>
                 </div>
             </a>
 
-            <div class="hidden md:flex items-center gap-6 font-medium text-sm text-slate-600">
-                <a href="#services" class="hover:text-amber-600 transition">சேவைகள்</a>
-                <!-- <a href="#about" class="hover:text-amber-600 transition">நன்மைகள்</a> -->
-                <a href="#contact" class="hover:text-amber-600 transition">தொடர்புக்கு</a>
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-amber-400 transition">சேவைகள்</a>
+                <a href="#features" class="hover:text-amber-400 transition">சிறப்பம்சங்கள்</a>
+                <a href="#contact" class="hover:text-amber-400 transition">தொடர்புக்கு</a>
             </div>
 
-            <a href="tel:8525897626"
-                class="hidden sm:inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-full font-medium text-sm shadow-sm transition">
-                <i class="fa-solid fa-phone"></i>
-                <span>8525897626</span>
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/918525897626" target="_blank" class="hidden sm:inline-flex items-center gap-2 glass-card hover:border-emerald-500 text-emerald-400 px-4 py-2 rounded-xl text-xs font-bold transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="tel:8525897626" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold shadow-lg shadow-amber-500/20 transition transform active:scale-95">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>85258 97626</span>
+                </a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative bg-slate-900 text-white py-16 md:py-24 overflow-hidden">
-        <div
-            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px]">
-        </div>
-        <div class="max-w-6xl mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <span
-                    class="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-amber-500/30">
-                    Trust & Experience • Keeranur & Pudukkottai
-                </span>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-white mb-4">
-                    புதிய வீடு கட்டுதல் & <span class="text-amber-500">புதுப்பிக்கும் பணிகளுக்கு</span> சிறந்த தரம்.
+    <header class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                    </span>
+                    <span>Keeranur & Pudukkottai • 25+ Years Legacy</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                    வீடு புதுப்பித்தல் & <br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">
+                        கட்டுமானப் பணிகள்
+                    </span> நம்பகமான தரம்.
                 </h1>
-                <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed">
-                    புதிய கட்டடப் பணிகள், பாத்ரூம் & கிச்சன் ரீமாடலிங், டைல்ஸ், வாட்டர்ப்ரூஃபிங் மற்றும் அனைத்து
-                    கொத்தனார் வேலைகளும் அனுபவம் வாய்ந்த மேஸ்திரிகளின் நேரடி பார்வையில் செய்து தரப்படும்.
+
+                <p class="text-slate-300 text-sm sm:text-base md:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    பாத்ரூம் & கிச்சன் ரீமாடலிங், டைல்ஸ் மற்றும் கிரானைட் லேயிங், மொட்டை மாடி நீர் கசிவு சரிசெய்தல், புதிய கட்டடப் பணிகள் ஆகியவை அனுபவம் வாய்ந்த மேஸ்திரி <strong>Rajkumar A</strong> அவர்களின் நேரடி பார்வையில் குறித்த நேரத்தில் செய்து தரப்படும்.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/918525897626?text=Hi%20ARC%20Works,%20எனக்கு%20கட்டுமானம்/புதுப்பிக்கும்%20பணிகள்%20பற்றி%20விவரம்%20வேண்டும்."
-                        target="_blank"
-                        class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition">
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 mb-8">
+                    <div class="glass-card p-3.5 rounded-xl text-center border-white/5">
+                        <div class="text-xl font-black text-amber-400 font-mono">25+</div>
+                        <div class="text-[10px] text-slate-400 font-medium">வருட அனுபவம்</div>
+                    </div>
+                    <div class="glass-card p-3.5 rounded-xl text-center border-white/5">
+                        <div class="text-xl font-black text-emerald-400 font-mono">150+</div>
+                        <div class="text-[10px] text-slate-400 font-medium">முடிந்த பணிகள்</div>
+                    </div>
+                    <div class="glass-card p-3.5 rounded-xl text-center border-white/5">
+                        <div class="text-xl font-black text-blue-400 font-mono">100%</div>
+                        <div class="text-[10px] text-slate-400 font-medium">நேரடி மேற்பார்வை</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/918525897626?text=Hi%20ARC%20Works,%20எனக்கு%20கட்டுமானம்/புதுப்பிக்கும்%20பணிகள்%20பற்றி%20விவரம்%20வேண்டும்." target="_blank" class="inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-4 rounded-xl shadow-xl shadow-emerald-500/25 transition transform active:scale-95 text-sm">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>WhatsApp-ல் பேச</span>
+                        <span>WhatsApp-ல் இலவச ஆலோசனை</span>
                     </a>
-                    <a href="tel:8525897626"
-                        class="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition">
-                        <i class="fa-solid fa-phone"></i>
+                    <a href="#contact" class="inline-flex items-center justify-center gap-2.5 glass-panel hover:border-amber-400 text-white font-semibold px-6 py-4 rounded-xl transition text-sm">
+                        <i class="fa-solid fa-phone text-amber-400"></i>
                         <span>இலவச Site Visit அழைக்க</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Profile Info Box -->
-            <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-2xl">
-                <h3 class="text-xl font-bold text-amber-400 mb-6 flex items-center gap-2">
-                    <i class="fa-solid fa-medal"></i> எங்களின் சிறப்பு அம்சங்கள்
-                </h3>
-                <ul class="space-y-4 text-slate-200 text-sm md:text-base">
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
-                        <span><strong>Rajkumar A (மேஸ்திரி):</strong> பல வருட நேரடி கள அனுபவம் மற்றும்
-                            மேற்பார்வை.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
-                        <span><strong>Material & Labour Contract:</strong> தரமான மூலப்பொருட்கள் மற்றும் நம்பகமான
-                            ஆட்கள்.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-check text-amber-400 mt-1"></i>
-                        <span><strong>நேரடி மதிப்பீடு:</strong> மறைமுக கட்டணங்கள் இல்லாத துல்லியமான Quotation.</span>
-                    </li>
-                </ul>
+            <!-- Hero Icon Card (No external images) -->
+            <div class="lg:col-span-5">
+                <div class="glass-panel p-8 sm:p-10 rounded-3xl relative overflow-hidden text-center">
+                    <div class="absolute -top-20 -right-20 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+                    
+                    <div class="w-20 h-20 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-3xl mx-auto mb-6 shadow-xl">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+
+                    <h3 class="text-xl font-black text-white mb-1">ARC HOME RENOVATION</h3>
+                    <p class="text-xs text-amber-400 font-bold tracking-widest uppercase mb-6">Masonry & Construction Works</p>
+                    
+                    <div class="glass-card p-4 rounded-2xl text-left space-y-3 mb-6 border-white/5">
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i class="fa-solid fa-user-tie text-amber-400 text-base w-5 text-center"></i>
+                            <span><strong>தலைமை மேஸ்திரி:</strong> Rajkumar A</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i class="fa-solid fa-location-dot text-amber-400 text-base w-5 text-center"></i>
+                            <span><strong>இடம்:</strong> கீரனூர், புதுக்கோட்டை மாவட்டம்</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-300">
+                            <i class="fa-solid fa-shield-halved text-amber-400 text-base w-5 text-center"></i>
+                            <span><strong>உத்தரவாதம்:</strong> தரமான பொருட்கள் & நேரடி மேற்பார்வை</span>
+                        </div>
+                    </div>
+
+                    <a href="tel:8525897626" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-amber-500/20 transition">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>இப்போதே அழைக்க: 85258 97626</span>
+                    </a>
+                </div>
             </div>
+
         </div>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 md:py-20 max-w-6xl mx-auto px-4">
-        <div class="text-center max-w-2xl mx-auto mb-14">
-            <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Our Services</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-1">எங்களின் கட்டுமான & புதுப்பித்தல் சேவைகள்
-            </h2>
-            <div class="w-16 h-1 bg-amber-600 mx-auto mt-3 rounded-full"></div>
+    <!-- Services Grid -->
+    <section id="services" class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-400 font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full glass-card border border-amber-400/20">Specialized Services</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">எங்களின் முதன்மை கட்டுமான & புதுப்பித்தல் சேவைகள்</h2>
+            <p class="text-slate-400 text-sm mt-2">பொருட்கள் மற்றும் அனுபவம் வாய்ந்த ஆட்களுடன் கூடிய முழுமையான வேலைகள்</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-building"></i>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-bath"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">Bathroom & Kitchen Remodeling</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">பழைய டைல்ஸ் உடைப்பு, டிஜிட்டல் சுவர் டைல்ஸ் ஒட்டுதல், Concealed Plumbing மற்றும் மாடுலர் கிச்சன் கிரானைட் மேடை பணிகள்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">New House Construction</h3>
-                <p class="text-slate-600 text-sm">தரை தளம் & மாடி வீடு கட்டுதல், பேஸ்மென்ட், பில்லர் மற்றும் ரூஃப்
-                    கான்கிரீட் பணிகள்.</p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Renovation Work</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-house-chimney-crack"></i>
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">Tiles, Granite & Paver Blocks</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">ஹால் & பெட்ரூம் Vitrified Tiles (4'x2'), படிக்கட்டு கிரானைட் மற்றும் வீட்டு முற்றம் பேவர் பிளாக் லேயிங் பணிகள்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Home Renovation & Extension</h3>
-                <p class="text-slate-600 text-sm">பழைய வீடுகளை மாற்றி அமைத்தல், கூடுதல் அறை மற்றும் போர்டிகோ அமைக்கும்
-                    பணிகள்.</p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Precision Leveling</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-bath"></i>
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">Terrace & Wall Leakage Solution</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">மொட்டை மாடி நீர் கசிவு அடைத்தல், சுவர்களில் உப்புப்பூத்தல் சரிசெய்தல் மற்றும் Dr. Fixit கெமிக்கல் கோட்டிங்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Bathroom & Kitchen Remodeling</h3>
-                <p class="text-slate-600 text-sm">நவீன டைல்ஸ் மற்றும் சானிட்டரி அமைத்தல், மாடுலர் கிச்சன் மேடை பணிகள்.
-                </p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>100% Leak Proof</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-droplet-slash"></i>
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">New House Construction</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">தரை தளம் & மாடி வீடு கட்டுதல், அஸ்திவாரம், பில்லர், ரூஃப் கான்கிரீட் மற்றும் செங்கல் கட்டுமானம்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Waterproofing & Leak Repair</h3>
-                <p class="text-slate-600 text-sm">மொட்டை மாடி நீர் கசிவு சரிசெய்தல், சுவர்களில் உப்புப்பூத்தல் மற்றும்
-                    விரிசல் அடைப்பு.</p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Turnkey Contracts</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-table-cells-large"></i>
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">Compound Wall & Plastering</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">9" செங்கல் காம்பவுண்ட் சுவர், உள்/வெளி சிமெண்ட் பூச்சு வேலைகள் (Plastering), போர்டிகோ & கேட் பில்லர்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Tiles, Granite & Paver Blocks</h3>
-                <p class="text-slate-600 text-sm">தரை தளம் டைல்ஸ்/கிரானைட் பதித்தல், வீட்டு முற்றம் பேவர் பிளாக் லேயிங்
-                    பணிகள்.</p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Masonry Works</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div
-                    class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fa-solid fa-shield-halved"></i>
+            <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-amber-400 transition">Painting, Plumbing & Electrical</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">சுவர் விரிசல் சரிசெய்தல், பிரைமர் & எமல்ஷன் பெயிண்டிங், புதிய சானிட்டரி மற்றும் எலக்ட்ரிக்கல் லைன் வேலைகள்.</p>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">Compound Wall & Masonry</h3>
-                <p class="text-slate-600 text-sm">காம்பவுண்ட் சுவர் கட்டுதல், பூச்சு வேலைகள், பிளம்பிங் & எலக்ட்ரிக்கல்
-                    பணிகள்.</p>
+                <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 font-semibold">
+                    <span>Complete Finishing</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features / Why Us Section -->
+    <section id="features" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full glass-card border border-amber-400/20">Why Choose Us</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">எங்களை ஏன் தேர்ந்தெடுக்க வேண்டும்?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">25+ வருட அனுபவம்</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">கீரனூர் மற்றும் புதுக்கோட்டை சுற்றுவட்டாரப் பகுதிகளில் பல வெற்றிகரமான கட்டுமான அனுபவம்.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">நேரடி மேற்பார்வை</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">மேஸ்திரி Rajkumar A அவர்களின் நேரடிப் பார்வையில் வேலைகள் துல்லியமாக முடிக்கப்படும்.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">நியாயமான மதிப்பீடு</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">மறைமுக கட்டணங்கள் இன்றி, வெளிப்படையான மெட்டீரியல் மற்றும் லேபர் Quotation.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Estimation Banner -->
-    <section class="bg-amber-600 text-white py-10">
-        <div
-            class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            <div>
-                <h3 class="text-2xl font-bold">கட்டுமானம் & புதுப்பித்தல் பணிகளுக்கு இலவச மதிப்பீடு</h3>
-                <p class="text-amber-100 mt-1">கீரனூர் மற்றும் புதுக்கோட்டை சுற்றுவட்டாரப் பகுதிகளில் நேரில் வந்து
-                    அளவெடுத்து தருகிறோம்.</p>
-            </div>
-            <a href="tel:8525897626"
-                class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3.5 rounded-xl font-bold shadow transition shrink-0">
-                <i class="fa-solid fa-phone mr-2"></i> 8525897626
-            </a>
-        </div>
-    </section>
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-10">
+            
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full glass-card border border-amber-400/20">Direct Connect</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">நேரடி தொடர்பு & ஆலோசனை</h2>
+                    <p class="text-slate-400 text-sm mt-2">கீரனூர் மற்றும் புதுக்கோட்டை சுற்றுவட்டாரப் பகுதிகளில் இலவச நேரடிப் பார்வை (Free Site Visit).</p>
+                </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 max-w-6xl mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <span class="text-amber-600 font-semibold text-sm tracking-wider uppercase">Contact Details</span>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-1 mb-6">தொடர்பு முகவரி</h2>
-
-                <div class="space-y-5">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800">மேஸ்திரி / Building Contractor</h4>
-                            <p class="text-slate-600">Rajkumar A</p>
-                        </div>
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-user-shield"></i>
                     </div>
-
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800">தொலைபேசி / WhatsApp</h4>
-                            <p class="text-slate-600">+91 85258 97626 / +91 85258 93053</p>
-                        </div>
+                    <div>
+                        <h4 class="text-xs text-slate-400 uppercase font-semibold">மேஸ்திரி / Contractor</h4>
+                        <p class="text-white font-bold text-base">Rajkumar A</p>
                     </div>
+                </div>
 
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800">முகவரி & சேவை பகுதிகள்</h4>
-                            <p class="text-slate-600">கீரனூர், குளத்தூர், விராலிமலை, மாத்தூர், புதுக்கோட்டை மற்றும்
-                                சுற்றுவட்டார பகுதிகள்.</p>
-                        </div>
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs text-slate-400 uppercase font-semibold">தொலைபேசி எண்கள்</h4>
+                        <p class="text-white font-bold text-sm sm:text-base font-mono">+91 85258 97626 / +91 85258 93053</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs text-slate-400 uppercase font-semibold">சேவை வழங்கும் இடங்கள்</h4>
+                        <p class="text-white font-medium text-xs sm:text-sm">கீரனூர், குளத்தூர், விராலிமலை, மாத்தூர், புதுக்கோட்டை.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- WhatsApp Direct Form -->
-            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100">
-                <h3 class="text-xl font-bold text-slate-900 mb-4">வேலைக்கான முன்பதிவு</h3>
-                <form onsubmit="sendToWhatsApp(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">உங்கள் பெயர்</label>
-                        <input id="clientName" type="text" required placeholder="பெயர்"
-                            class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">ஊர் / பகுதி</label>
-                        <input id="clientLocation" type="text" required placeholder="எ.கா: கீரனூர்"
-                            class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 uppercase mb-1">தேவையான பணி
-                            விவரம்</label>
-                        <textarea id="workDetail" rows="3" required
-                            placeholder="புதிய வீடு / புதுப்பித்தல் / டைல்ஸ் / வாட்டர்ப்ரூஃபிங்..."
-                            class="w-full px-4 py-2.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>WhatsApp-ல் அனுப்பவும்</span>
-                    </button>
-                </form>
+            <!-- Booking Form -->
+            <div class="lg:col-span-7">
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-check text-amber-400"></i> பணி முன்பதிவு படிவம்
+                    </h3>
+
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-1.5">உங்கள் பெயர்</label>
+                                <input id="fName" type="text" required placeholder="எ.கா: சுரேஷ்" class="glass-input w-full px-4 py-3 rounded-xl text-white text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-1.5">ஊர் / பகுதி</label>
+                                <input id="fLocation" type="text" required placeholder="எ.கா: கீரனூர்" class="glass-input w-full px-4 py-3 rounded-xl text-white text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1.5">தேவையான பணி (Work Type)</label>
+                            <input id="fWork" type="text" required placeholder="எ.கா: பாத்ரூம் புதுப்பித்தல் / தரை டைல்ஸ் / புதிய கட்டடம்" class="glass-input w-full px-4 py-3 rounded-xl text-white text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-1.5">கூடுதல் விவரம் (Description)</label>
+                            <textarea id="fDesc" rows="3" placeholder="வேலையின் பரப்பளவு அல்லது ஏதேனும் குறிப்பிட்ட தேவைகள்..." class="glass-input w-full px-4 py-3 rounded-xl text-white text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-700 hover:from-emerald-400 hover:to-emerald-600 text-slate-950 font-black py-4 rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-emerald-500/25 transition transform active:scale-95 text-sm">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>WhatsApp வழியாக உடனடியாக முன்பதிவு செய்ய</span>
+                        </button>
+                    </form>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-sm">
-        <p class="font-semibold text-slate-300">ARC Home Renovation, Masonry & Construction Works</p>
-        <p class="text-xs text-slate-500 mt-1">Keeranur, Pudukkottai District, Tamil Nadu - 622 502</p>
+    <footer class="glass-nav py-8 text-center text-xs text-slate-400 border-t border-white/10 mt-12">
+        <p class="font-bold text-slate-200">ARC Home Renovation, Masonry & Construction Works</p>
+        <p class="mt-1">Keeranur, Pudukkottai District, Tamil Nadu - 622 502</p>
+        <p class="mt-3 text-slate-500 font-mono">© 2026 ARC Renovations. Designed for Trust & Craftsmanship.</p>
     </footer>
 
+    <!-- Interactive Script -->
     <script>
-        function sendToWhatsApp(event) {
+        function handleFormSubmit(event) {
             event.preventDefault();
-            const name = document.getElementById('clientName').value;
-            const loc = document.getElementById('clientLocation').value;
-            const detail = document.getElementById('workDetail').value;
-            const msg = `வணக்கம் ARC Works,%0A%0Aபெயர்: ${encodeURIComponent(name)}%0Aஇடம்: ${encodeURIComponent(loc)}%0Aதேவை: ${encodeURIComponent(detail)}`;
-            window.open(`https://wa.me/918525897626?text=${msg}`, '_blank');
+            const name = document.getElementById('fName').value;
+            const loc = document.getElementById('fLocation').value;
+            const work = document.getElementById('fWork').value;
+            const desc = document.getElementById('fDesc').value;
+
+            const text = `வணக்கம் ARC Works,%0A%0Aபெயர்: ${encodeURIComponent(name)}%0Aஇடம்: ${encodeURIComponent(loc)}%0Aபணி: ${encodeURIComponent(work)}%0Aவிவரம்: ${encodeURIComponent(desc)}`;
+            window.open(`https://wa.me/918525897626?text=${text}`, '_blank');
         }
     </script>
 </body>
-
-</html> 
+</html>
